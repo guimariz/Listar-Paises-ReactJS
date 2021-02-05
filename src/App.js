@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import Countries from './components/countries/Countries';
 
 export default class App extends Component {
   constructor() {
@@ -30,11 +31,10 @@ export default class App extends Component {
   render() {
     const { allCountries } = this.state;
 
-    console.log(allCountries);
-
     return (
       <div>
         <h1>React Countries</h1>
+        <Countries countries={allCountries} />
       </div>
     );
   }
