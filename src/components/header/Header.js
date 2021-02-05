@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { formatNumber } from '../../helpers/formatHelpers';
 
 export default class Header extends Component {
   handleInputChange = (event) => {
@@ -13,9 +14,9 @@ export default class Header extends Component {
         <input type="text" value={filter} onChange={this.handleInputChange} />
         <br />
         <span>
-          Países: {countryCount} <br />
+          Quantidade Países: {countryCount} <br />
         </span>
-        <span>População: {totalPopulation}</span>
+        <span>População Total: {formatNumber(totalPopulation)}</span>
       </div>
     );
   }
